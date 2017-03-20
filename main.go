@@ -27,6 +27,6 @@ func main() {
 
 	http.Handle("/", http.FileServer(http.Dir("public")))
 
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), nil))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), nil))
 
 }
